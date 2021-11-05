@@ -21,3 +21,21 @@ summa = a + b + c
 multiplier = a * b * c
 print(f'Сумма = {summa}')
 print(f'Произведение = {multiplier}')
+
+
+"""
+2. Вычислим значение функции y=f(x)
+f(x)=2x-10 при x>0; f(x)=0 при x=0; f(x)=2|x|-1 при x<0; 
+"""
+x = int(input("Введите х: "))
+if x > 0:
+    y = 2 * x - 10
+elif x == 0:
+    y = 0
+else:
+    y = 2 * abs(x) - 1
+
+print(f"y = {y}")
+
+
+
