@@ -1,7 +1,11 @@
+import time
+from func_timer import changing_number_of_semicolons
+
 """
 Алгоритмическое представление
 цикла с предусловием
 """
+
 num = int(input("Введите целое число: "))
 while num > 0:
     print(num % 10)
@@ -28,11 +32,20 @@ while True:
 """
 
 i = 0
+start = time.time()
 while i <= 10:
     print(i)
     i += 1
-# или
+end = time.time()
+print(
+    f'Название цикла: while, время работы: '
+    f'{changing_number_of_semicolons(number=(end - start), digits=10)} сек.')
+
+
+start = time.time()
 for i in range(11):
     print(i)
-
-
+end = time.time()
+print(
+    f'Название цикла: for, время работы: '
+    f'{changing_number_of_semicolons(number=(end - start), digits=10)} сек.')
