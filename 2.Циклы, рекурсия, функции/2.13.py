@@ -15,15 +15,3 @@ for index, i in enumerate(list_2):
         st = st + f'| {j} |'
     print(st)
 
-# t = 0
-# st = ''
-# for index, i in enumerate(list_):
-#     t += 1
-#     if t < 11:
-#         st = st + f'| {i} |'
-#     elif index == len(list_):
-#         print(st)
-#     else:
-#         print(st)
-#         t = 0
-#         st = ''
