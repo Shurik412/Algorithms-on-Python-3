@@ -102,3 +102,4 @@ print(
     f'{changing_number_of_semicolons(number=(end - start), digits=10)} сек.'
 )
 # print(array)
+
