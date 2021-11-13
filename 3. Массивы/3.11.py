@@ -12,7 +12,7 @@
 import random
 from icecream import ic
 
-array = [random.randint(-100000, 1000000) for _ in range(10)]
+array = [random.randint(-100, 100) for _ in range(10)]
 dict_ = {}
 
 max_ = 0
@@ -28,17 +28,40 @@ for pos, i in enumerate(array):
         pos_min = pos
 
 if pos_max > pos_min:
-    ic(array[(pos_min+1):pos_max])
-    summa = sum(array[(pos_min+1):pos_max])
+    ic(array[(pos_min + 1):pos_max])
+    summa = sum(array[(pos_min + 1):pos_max])
     ic(summa)
 elif pos_max < pos_min:
-    ic(array[(pos_max+1):pos_min])
-    summa = sum(array[(pos_max+1):pos_min])
+    ic(array[(pos_max + 1):pos_min])
+    summa = sum(array[(pos_max + 1):pos_min])
     ic(summa)
-
 
 ic(array)
 ic(max_)
 ic(pos_max)
 ic(min_)
 ic(pos_min)
+
+ic('=' * 30)
+# Вариант 1
+
+idx_min = 0
+idx_max = 0
+
+for i in range(1, 10):
+    if array[i] < array[idx_min]:
+        idx_min = i
+    elif array[i] > array[idx_max]:
+        idx_max = i
+
+ic(array[idx_min], array[idx_max])
+
+if idx_min > idx_max:
+    idx_min, idx_max = idx_max, idx_min
+
+summ = 0
+
+for i in range(idx_min + 1, idx_max):
+    summ += array[i]
+
+ic(summ)

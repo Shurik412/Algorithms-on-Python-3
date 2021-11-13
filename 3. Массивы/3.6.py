@@ -7,17 +7,12 @@
 Коментарий: количество ответов равно 8
 """
 
-start = 2
-finished = 99
-natural_number = [value for value in range(2, 100)]
-multiples_of_numbers = [value for value in range(2, 10)]
+a = [0] * 8
 
-len_multiples_of_numbers = len(multiples_of_numbers)
-len_natural_number = len(natural_number)
-
-
-for divisible in natural_number:
-    for divisor in multiples_of_numbers:
-        result = divisible % divisor
-        if result == 0:
-            print(f'divisible = {divisible}, divisor = {divisor}')
+for i in range(2, 100):
+    for j in range(2, 10):
+        if i % j == 0:
+            a[j - 2] += 1
+            print(a)
+for i, item in enumerate(a, start=2):
+    print(f'Числу {i} кратно {item} чисел')
